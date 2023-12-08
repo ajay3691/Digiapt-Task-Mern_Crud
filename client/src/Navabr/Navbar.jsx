@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
-        <Link to="/index" className='navbar-brand'>Authentication</Link>
+        <Link to="/index" className='navbar-brand'>Product Crud</Link>
         <div className='ml-auto'>
           <ul className='navbar-nav'>
             {
@@ -31,8 +31,6 @@ const Navbar = () => {
                       Logout
                     </button>
                     <li className='nav-list'><Link className="nav-link" to="/admin">Admin</Link></li>
-                   {/*  <li className='nav-list'><Link className="nav-link" to="/createProd">CreateProd</Link></li>
-                    <li className='nav-list'> <Link className="nav-link" to="/updateProd">UpdateProd</Link> </li> */}
                   </>
                 )}
           </ul>
