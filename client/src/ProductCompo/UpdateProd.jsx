@@ -31,6 +31,19 @@ const UpdateProductPage = () => {
     setProductData({ ...productData, [e.target.name]: e.target.value });
   };
 
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setProductData({ ...productData, p_image: reader.result });
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,6 +64,7 @@ const UpdateProductPage = () => {
       <div className="row">
         <div className="col-md-6">
           <form onSubmit={handleSubmit}>
+
             <div className="form-group">
               <label>Product ID:</label>
               <input
@@ -89,11 +103,23 @@ const UpdateProductPage = () => {
               <input
                 type="text"
                 name="p_image"
+                placeholder='Copy image address URL from Google and paste here'
                 value={productData.p_image}
                 onChange={handleChange}
                 className="form-control"
               />
+              <br />
+              <label className='text-primary'>OR</label>
+              <br />
+              <label>Upload Image:</label>
+              <input
+                type="file"
+                accept="image/jpeg, image/png"
+                onChange={handleImageUpload}
+                className="form-control"
+              />
             </div>
+
             <div className="form-group">
               <label>Product Description:</label>
               <textarea
