@@ -4,7 +4,7 @@ import { store } from '../App';
 
 const Navbar = () => {
   const [token, setToken] = useContext(store);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     setToken(null);

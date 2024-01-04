@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useState, useContext } from 'react';
 import { store } from '../App';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const [token, setToken] = useContext(store);
     const [data, setData] = useState({
         email: "",
