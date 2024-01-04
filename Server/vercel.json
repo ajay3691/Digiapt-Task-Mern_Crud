@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js", 
+        "use": "@now/node"
+      }
+    ],
+    "env": {
+      "MONGODB_URL": "mongodb+srv://ajayarama9:Indian%2A369@cluster0.mz9kjda.mongodb.net/project1"
+    }
+  }
+  
