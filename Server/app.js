@@ -42,3 +42,21 @@ app.listen(port, host, (err) => {
     if (err) throw err
     console.log(`Server Running on http://${host}:${port}`)
 })
+
+
+
+/* {
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ]
+} */
