@@ -3,7 +3,7 @@ import Product from '../models/Product.js';
 
 const router = express.Router();
 router.get("/", (req, resp) => {
-  resp.send("Hello")
+  resp.send("Hello product apis")
 })
 
 router.post('/product', async (req, res) => {
