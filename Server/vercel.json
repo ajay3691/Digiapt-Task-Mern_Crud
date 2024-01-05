@@ -13,31 +13,11 @@
   "routes": [
     {
       "src": "/api/.*",
-      "dest": "/server/app.js"
+      "dest": "/server"
     },
     {
       "src": "/(.*)",
       "dest": "/client/index.html"
-    },
-    {
-      "src": "/redirect",
-      "status": 308,
-      "headers": { "Location": "https://example.com/" }
-    },
-    {
-      "src": "/custom-page",
-      "headers": { "cache-control": "s-maxage=1000" },
-      "dest": "/client/index.html"
-    },
-    { 
-      "src": "/legacy", 
-      "status": 404,
-      "dest": "/client/legacy.html"
-    },
-    { 
-      "src": "/.*", 
-      "status": 404, 
-      "dest": "/client/legacy.html"
     }
   ]
 }
