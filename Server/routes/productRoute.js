@@ -2,7 +2,10 @@ import express from 'express';
 import Product from '../models/Product.js';
 
 const router = express.Router();
+router.get("/", (req, resp) => {
+  resp.send("Hello")
 
+})
 
 router.post('/product', async (req, res) => {
   try {
