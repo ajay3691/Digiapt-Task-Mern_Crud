@@ -25,7 +25,7 @@ const Register = () => {
 
         setError(null);
 
-        axios.post("https://digiapt-task-mern-crud.vercel.app/user/register", data)
+        axios.post("http://localhost:5000/user/register", data)
             .then((resp) => {
                 alert("User registered successfully");
             })

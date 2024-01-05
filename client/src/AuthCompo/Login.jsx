@@ -19,7 +19,7 @@ const Login = () => {
         event.preventDefault();
         console.log(data);
 
-        axios.post("https://digiapt-task-mern-crud.vercel.app/user/login", data)
+        axios.post("http://localhost:5000/user/login", data)
             .then((resp) => {
                 setToken(resp.data.token);
                 navigate('/myfrofile');
