@@ -6,8 +6,8 @@ import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken";
 import middleware from "./middlewere.js";
 
-authRouter.get("/" (req, resp) => {
-     resp.send("User apis")
+authRouter.get("/", (req, resp) => {
+  resp.send("user apis")
 })
 authRouter.get("/users", async (req, resp) => {
     try {
