@@ -15,7 +15,7 @@ const ProductList = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://digiapt-task-mern-crud-re4s.vercel.app/api/products', { params: filters });
+      const response = await axios.get('https://digiapt-task-mern-crud.vercel.app/api/products', { params: filters });
       setProducts(response.data);
       const total = parseInt(response.headers['x-total-pages'], 10) || 0;
       setTotalPages(total);
@@ -47,7 +47,7 @@ const ProductList = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this product?');
     if (confirmDelete) {
       try {
-        await axios.delete(`https://digiapt-task-mern-crud-re4s.vercel.app/api/product/${productId}`);
+        await axios.delete(`https://digiapt-task-mern-crud.vercel.app/api/product/${productId}`);
         fetchData();
       } catch (error) {
         console.error('Error deleting product:', error);
@@ -63,7 +63,7 @@ const ProductList = () => {
 
       try {
         const updatedData = JSON.parse(jsonInput);
-        await axios.put(`https://digiapt-task-mern-crud-re4s.vercel.app/api/product/${productId}`, updatedData);
+        await axios.put(`https://digiapt-task-mern-crud.vercel.app/api/product/${productId}`, updatedData);
         fetchData();
       } catch (error) {
         console.error('Error updating product with JSON data:', error);

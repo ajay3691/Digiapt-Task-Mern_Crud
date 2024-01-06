@@ -12,7 +12,7 @@ const Myprofile = () => {
         if (!token) {
             navigate('/login');
         } else {
-            axios.get('https://digiapt-task-mern-crud-re4s.vercel.app/user/myprofile', {
+            axios.get('https://digiapt-task-mern-crud.vercel.app/user/myprofile', {
                 headers: { 'x-token': token }
             })
                 .then((resp) => {
