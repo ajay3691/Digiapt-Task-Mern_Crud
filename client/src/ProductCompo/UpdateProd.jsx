@@ -17,7 +17,7 @@ const UpdateProductPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/product/${productId}`);
+        const response = await axios.get(`https://digiapt-task-mern-crud-re4s.vercel.app/api/product/${productId}`);
         setProductData(response.data);
       } catch (error) {
         console.error('Error fetching product data:', error);
@@ -48,7 +48,7 @@ const UpdateProductPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/product/${productId}`, productData);
+      const response = await axios.put(`https://digiapt-task-mern-crud-re4s.vercel.app/api/product/${productId}`, productData);
       console.log('Updated product:', response.data);
       alert('Product updated successfully');
       navigate('/admin');

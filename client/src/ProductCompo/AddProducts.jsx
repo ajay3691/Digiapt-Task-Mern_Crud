@@ -29,7 +29,7 @@ const YourComponent = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/product', formData);
+            const response = await axios.post('https://digiapt-task-mern-crud-re4s.vercel.app/api/product', formData);
             console.log('Product created successfully:', response.data);
             alert("Product created succesfully")
         } catch (error) {
